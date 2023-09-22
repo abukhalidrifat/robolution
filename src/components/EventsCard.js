@@ -1,9 +1,16 @@
+"use client"
 import React from "react";
+import { motion } from "framer-motion";
 
-export default function EventsCard({title,subtitle,img}) {
+export default function EventsCard({ title, subtitle, img }) {
   return (
     <>
-      <div className="bg-slate-700 my-6 px-8 py-4 rounded-lg flex hover:bg-slate-600">
+      <motion.div
+        initial={{ x: "-100%",opacity:0 }}
+        whileInView={{ x: 0,opacity:1 }}
+        transition={{  type:'spring',mass:1}}
+        className="bg-slate-700 my-6 px-8 py-4 rounded-lg flex hover:bg-slate-600"
+      >
         <div className="bg-white w-fit h-fit self-center p-1 rounded-md flex">
           {img}
         </div>
@@ -24,7 +31,7 @@ export default function EventsCard({title,subtitle,img}) {
             />
           </svg>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
