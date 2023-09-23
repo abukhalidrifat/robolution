@@ -5,7 +5,7 @@ import slugify from "react-slugify";
 export default function CompetitionDetailsModal({ closeModal }) {
   const searchParams = useSearchParams();
 
-  const event = searchParams.get("event");
+  const eventQuery = searchParams.get("event");
 
   const feesAndPrizes = [
     {
@@ -82,9 +82,8 @@ export default function CompetitionDetailsModal({ closeModal }) {
     },
   ];
 
-  const filtered = feesAndPrizes.filter((data) => slugify(data.event) == event);
-  const data = filtered[0];
-
+  const filtered = feesAndPrizes.filter((data) => slugify(data.event) == eventQuery);
+  const data = filtered.length > 0 ? filtered[0] : [];
 
   return (
     <>

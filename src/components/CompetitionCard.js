@@ -11,8 +11,8 @@ export default function CompetitionCrad({ logo, name }) {
   const router = useRouter();
 
   const handleSelectedCard = (evName) => {
-    const slug = slugify(evName)
-    router.push(`/?event=${slug}`,{scroll:false})
+    const slug = slugify(evName);
+    router.push(`?event=${slug}`, { scroll: false });
   };
 
   return (
@@ -23,7 +23,7 @@ export default function CompetitionCrad({ logo, name }) {
       <motion.div
         onClick={() => {
           setShowModal(true);
-          handleSelectedCard(name)
+          handleSelectedCard(name);
         }}
         initial={{ y: "50px", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
