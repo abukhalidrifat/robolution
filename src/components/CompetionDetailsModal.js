@@ -85,7 +85,6 @@ export default function CompetitionDetailsModal({ closeModal }) {
   const filtered = feesAndPrizes.filter((data) => slugify(data.event) == event);
   const data = filtered[0];
 
-  console.log(filtered[0].event);
 
   return (
     <>

@@ -12,7 +12,7 @@ export default function CompetitionCrad({ logo, name }) {
 
   const handleSelectedCard = (evName) => {
     const slug = slugify(evName)
-    router.push(`?event=${slug}`,{scroll:false})
+    router.push(`/?event=${slug}`,{scroll:false})
   };
 
   return (
