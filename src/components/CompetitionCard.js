@@ -38,6 +38,7 @@ export default function CompetitionCrad({ logo, name }) {
           style={{ height: "220px", objectFit: "fill" }}
         />
         <h1 className="text-center text-lg font-bold py-4">{name}</h1>
+        <span className="text-center text-white text-xs">(click to see details)</span>
       </motion.div>
     </>
   );

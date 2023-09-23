@@ -108,7 +108,7 @@ export default function CompetitionDetailsModal({ closeModal }) {
                   Registration fees
                 </h1>
                 <ul className="list-disc text-slate-900">
-                  <li className="ml-4">{data.one}</li>
+                  <li className="ml-4 mb-2">{data.one}</li>
                   {data.two ? <li className="ml-4">{data.two}</li> : null}
                 </ul>
                 <br />
@@ -116,15 +116,15 @@ export default function CompetitionDetailsModal({ closeModal }) {
                   Prizes
                 </h1>
                 <ul className="list-disc text-slate-900">
-                  <li key={data.event} className="py-2">
+                  <li className="ml-4 mb-2">
                     <span className="font-bold">Champion: </span>
                     {data.first}
                   </li>
-                  <li key={data.event} className="py-2">
+                  <li className="ml-4 mb-2">
                     <span className="font-bold">1st Runners Up: </span>
                     {data.second}
                   </li>
-                  <li key={data.event} className="py-2">
+                  <li className="ml-4 mb-2">
                     <span className="font-bold">2nd Runners Up: </span>
                     {data.third}
                   </li>
